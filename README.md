@@ -40,7 +40,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |tweet|text|
-|image|blob|
+|image|string|
 |user_id|integer|foreign_key: true|
 |group_id|integer|foreign_key: true|
 
