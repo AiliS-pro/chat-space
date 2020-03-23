@@ -30,6 +30,20 @@ Things you may want to cover:
 |email|string|null: false, unique: true|
 |password|string|null: false|
 
+
 ### Association
 - has_many :tweets
 - has_many :users_groups
+
+## tweetsテーブル
+|column|Type|Options|
+|------|----|-------|
+|tweet|text|null: false|
+|image|blob|
+|user_id|integer|foreign_key: true|
+|group_id|integer|foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
