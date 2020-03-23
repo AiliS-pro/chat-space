@@ -39,7 +39,7 @@ Things you may want to cover:
 ## tweetsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|tweet|text|null: false|
+|tweet|text|
 |image|blob|
 |user_id|integer|foreign_key: true|
 |group_id|integer|foreign_key: true|
