@@ -63,8 +63,8 @@ Things you may want to cover:
 ## users_groupsテーブル
 |Column|Type|Option|
 |------|----|------|
-|users_id|integer|foreign_key: true|
-|groups_id|integer|foreign_key: true|
+|users_id|integer|foreign_key: true, null :false|
+|groups_id|integer|foreign_key: true, null :false|
 
 ### Association
 - belongs_to :user
