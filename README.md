@@ -47,3 +47,14 @@ Things you may want to cover:
 - belongs_to :user
 - belongs_to :group
 
+
+## groupsテーブル
+|column|Type|Options|
+|------|----|-------|
+|group_name|text|null: false|
+
+### Association
+- has_many :tweets
+- has_many :users_groups
+
+
