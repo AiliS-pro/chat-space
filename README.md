@@ -58,3 +58,12 @@ Things you may want to cover:
 - has_many :users_groups
 
 
+## users_groupsテーブル
+|column|Type|Option|
+|------|----|------|
+|users_id|integer|foreign_key: true|
+|groups_id|integer|foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
