@@ -1,0 +1,36 @@
+.main
+  .main__header
+    .main__header__group-info
+      .main__header__group-info__group-name
+        グループ名
+      .main__header__group-info--member-list
+        Member: 今いるメンバーのリスト
+    = link_to "Edit","#", class: "main__header--edit-btn"
+  
+  .main__message-list
+    .main__message-list__message-unit
+      .main__message-list__message-unit__messanger-info
+        .main__message-list__message-unit__messanger-info--messanger-name
+          messanger
+        .main__message-list__message-unit__messanger-info--sent-time
+          sent time
+      .main__message-list__message-unit--sent-message
+        おはよう！
+    .main__message-list__message-unit
+      .main__message-list__message-unit__messanger-info
+        .main__message-list__message-unit__messanger-info--messanger-name
+          messanger
+        .main__message-list__message-unit__messanger-info--sent-time
+          sent time
+      .main__message-list__message-unit--sent-message
+        おはよう！
+  
+  .main__footer
+    .main__footer__message-form
+      .main__footer__message-form__message-create
+        %input{type: "text", placeholder: "type a message", class: "main__footer__message-form__message-create--text-form"}
+        .main__footer__message-form__message-create__image-form
+          %label{class: "main__footer__message-form__message-create__image-form--image-label"}
+            = icon('far', 'image')
+            %input{type: "file" , class: "main__footer__message-form__message-create__image-form--image-label--none"}
+      %input{type: "submit", value: "Send", class: "main__footer__message-form__send-btn"}
