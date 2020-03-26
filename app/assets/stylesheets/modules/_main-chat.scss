@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+$btn-color: #38aef0;
+$right-gray: #434a54;
+$white: #ffffff;
+$font-thin: #999999;
+$font-dark: #333333;
+.main {
+  float: right;
+  
+  &__header {
+    background-color: $white;
+    width: calc(100vw - 300px);
+    height: 100px;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    &__group-info {
+      padding-left: 40px;
+      &__group-name {
+        padding-top: 35px;
+        padding-bottom: 15px;
+        color: $font-dark;
+        font-size: 20px;
+      }
+      &--member-list {
+        color: $font-thin;
+        font-size: 12px;
+      }
+    }  
+    &--edit-btn {
+        height: 40px;
+        padding: 0 20px;
+        margin-top: 30px;
+        margin-right: 40px;
+        font-size: 16px;
+        line-height: 40px;
+        border: 1px solid $btn-color;
+        color: $btn-color;
+        text-decoration: none;
+    }
+  }
+
+  &__message-list {
+    background-color: #fafafa;
+    width: calc(100vw - 300px);
+    height: calc(100vh - 100px - 90px);
+    padding: 35px 0 0 40px;
+    &__message-unit {
+      margin-bottom: 46px;
+      &__messanger-info {
+        padding-bottom: 12px;
+        display: flex;
+        &--messanger-name {
+          color: $font-dark;
+          font-size: 16px;
+          font-weight: bold;
+          padding-right: 10px;
+        }
+        &--sent-time {
+          color: $font-thin;
+          font-size: 12px;
+        }
+      }
+      &--sent-message {
+        font-size: 14px;
+        color: $right-gray;
+      }
+    }
+  }
+  
+  &__footer {
+    background-color: #d2d2d2;
+    width: calc(100vw - 300px);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    &__message-form {
+      height: 50px;
+      width: calc(100% - 80px);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      &__message-create {
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        &--text-form {
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          color: $right-gray;
+          line-height: 50px;
+          cursor: text;
+          border-style: none;
+        }
+        &__image-form {
+          font-size: 24px;
+          position: absolute;
+          right: 10px;
+          cursor: pointer;
+          &--image-label {
+            color: black;
+            cursor: pointer;
+            &--none {
+              display: none;
+            }
+          }
+        }
+      }
+      &__send-btn {
+        background-color: $btn-color;
+        height: 50px;
+        width: 100px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+        margin-left: 15px;
+        color: $white;
+        border-style: none;
+        padding: 0 30px;
+      }
+    }
+  }
+
+}
