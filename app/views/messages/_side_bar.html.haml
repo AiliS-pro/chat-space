@@ -2,11 +2,11 @@
   .side__header
     .side__header__top-items
       .side__header__top-items__name
-        なまえ---
+        = current_user.name
       .side__header__top-items__icons
         =link_to "#", class: "side__header__top-items__icons--icon" do
           = icon('far', 'edit', class: "side__header__top-items__icons--icon")
-        =link_to "#", class: "side__header__top-items__icons--icon" do
+        =link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: "side__header__top-items__icons--icon")
   .side__list
     .side__list__group-name
