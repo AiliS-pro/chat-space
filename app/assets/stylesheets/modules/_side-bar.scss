@@ -37,15 +37,17 @@ $font-color: #ffffff;
     background-color: #2f3e51;
     width: 300px;
     height: calc(100vh - 100px);
-    &__group-name {
-      font-size: 15px;
-      padding: 20px 0px 5px 20px;
-      color: $font-color;
-    }
-    &__comment-last {
-      padding: 0px 0px 20px 20px;
-      font-size: 11px;
-      color: $font-color;
+    &__group-unit {
+      &--group-name {
+        font-size: 15px;
+        padding: 20px 0px 5px 20px;
+        color: $font-color;
+      }
+      &--comment-last {
+        padding: 0px 0px 20px 20px;
+        font-size: 11px;
+        color: $font-color;
+      }
     }
   }
 }
