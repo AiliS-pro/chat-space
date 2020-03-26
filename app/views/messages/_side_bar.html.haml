@@ -4,20 +4,15 @@
       .side__header__top-items__name
         = current_user.name
       .side__header__top-items__icons
-        =link_to "#", class: "side__header__top-items__icons--icon" do
+        =link_to new_group_path, class: "side__header__top-items__icons--icon" do
           = icon('far', 'edit', class: "side__header__top-items__icons--icon")
         =link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: "side__header__top-items__icons--icon")
   .side__list
-    .side__list__group-name
-      グループ名
-    .side__list__comment-last
-      最後のコメント
-    .side__list__group-name
-      グループ名
-    .side__list__comment-last
-      最後のコメント
-    .side__list__group-name
-      グループ名
-    .side__list__comment-last
-      最後のコメント
+    - current_user.groups.each do |group|
+      .side__list__group-unit
+        = link_to '#' do
+          .side__list__group-unit--group-name
+            = group.name
+          .side__list__group-unit--comment-last
+            メッセージはまだありません。

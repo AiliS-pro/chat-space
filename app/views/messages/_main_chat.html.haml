@@ -5,8 +5,7 @@
         グループ名
       .main__header__group-info--member-list
         Member: 今いるメンバーのリスト
-    = link_to "Edit","#", class: "main__header--edit-btn"
-  
+    =link_to 'Edit', edit_group_path(current_user), class: "main__header--edit-btn" 
   .main__message-list
     .main__message-list__message-unit
       .main__message-list__message-unit__messanger-info
