@@ -1,0 +1,11 @@
+.main__message-list__message-unit
+  .main__message-list__message-unit__messanger-info
+    .main__message-list__message-unit__messanger-info--messanger-name
+      = tweet.user.name
+    .main__message-list__message-unit__messanger-info--sent-time
+      = tweet.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .main__message-list__message-unit--sent-message
+    - if tweet.tweet.present?
+      %p.lower-message__content
+        = tweet.tweet
+    = image_tag tweet.image.url, class: 'lower-message__image' if tweet.image.present?

@@ -1,0 +1,25 @@
+.main
+  .main__header
+    .main__header__group-info
+      .main__header__group-info__group-name
+        = @group.name
+      .main__header__group-info--member-title
+        Member：
+        %ul
+          %li 
+            - @group.group_users.each do |group_user|
+              = group_user.user.name
+    =link_to 'Edit', edit_group_path(current_user), class: "main__header--edit-btn" 
+  
+  .main__message-list
+    .tweets
+      = render @tweets
+
+  .main__footer
+    .main__footer__message-form
+      = form_for [@group, @tweet] do |f|
+        = f.text_field :tweet, class: 'main__footer__message-form__message-create', placeholder: 'type a message'
+        = f.label :image, class: 'main__footer__message-form__message-create__image-form' do
+          = icon('far', 'image')
+          = f.file_field :image, class: 'main__footer__message-form__message-create__image-form--image-label--none'
+        = f.submit 'Send', class: 'main__footer__message-form__send-btn'

@@ -11,8 +11,8 @@
   .side__list
     - current_user.groups.each do |group|
       .side__list__group-unit
-        = link_to '#' do
+        = link_to group_tweets_path(group) do
           .side__list__group-unit--group-name
             = group.name
           .side__list__group-unit--comment-last
-            メッセージはまだありません。
+            = group.show_last_tweet
