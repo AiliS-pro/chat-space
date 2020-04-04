@@ -8,7 +8,7 @@ $(function(){
                 ${tweet.user_name}
               </div>
               <div class="main__message-list__message-unit__messanger-info--sent-time">
-                ${tweet.created_at.strftime("%Y年%m月%d日 %H時%M分")}
+                ${tweet.created_at}
               </div>
             </div>
             <div class="main__message-list__message-unit--sent-message">

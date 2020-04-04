@@ -9,7 +9,7 @@
           %li 
             - @group.group_users.each do |group_user|
               = group_user.user.name
-    =link_to 'Edit', edit_group_path(current_user), class: "main__header--edit-btn" 
+    =link_to 'Edit', edit_group_path(@group), class: "main__header--edit-btn" 
   
   .main__message-list
     .tweets

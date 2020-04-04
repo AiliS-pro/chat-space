@@ -12,6 +12,7 @@ class TweetsController < ApplicationController
     if @tweet.save
       respond_to do |format|
         format.json
+        format.html{redirect_to group_tweets_path(@group)}
       end
     else
       @tweets = @group.tweets.includes(:user)
