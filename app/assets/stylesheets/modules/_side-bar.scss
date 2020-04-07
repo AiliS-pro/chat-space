@@ -2,6 +2,9 @@
   box-sizing: border-box;
 }
 $font-color: #ffffff;
+a {
+  text-decoration: none;
+}
 .side {
   float: left;
   &__header {
@@ -40,6 +43,7 @@ $font-color: #ffffff;
     overflow: scroll;
     &__group-unit {
       &--group-name {
+        text-decoration: none;
         font-size: 15px;
         padding: 20px 0px 5px 20px;
         color: $font-color;
