@@ -21,6 +21,7 @@ a {
       justify-content: space-between;
       line-height: 20px;
       text-align: right;
+      cursor: default;
       &__name {
         color: $font-color;
         font-weight: bold;
@@ -45,6 +46,7 @@ a {
       &--group-name {
         text-decoration: none;
         font-size: 15px;
+        font-weight: bold;
         padding: 20px 0px 5px 20px;
         color: $font-color;
       }

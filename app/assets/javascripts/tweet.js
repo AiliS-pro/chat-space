@@ -1,5 +1,6 @@
 $(function(){ 
-     function buildHTML(tweet){
+
+    function buildHTML(tweet){
       if (tweet.image) {
         var html =
          `<div class="main__message-list__message-unit" data-tweet-id=${tweet.id}>
@@ -38,7 +39,9 @@ $(function(){
           </div>`
         return html;
       };
+
     }
+
   $('#new_tweet').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -74,7 +77,7 @@ $(function(){
     .done(function(tweets) {
       if (tweets.length !== 0) {
         var insertHTML = '';
-        $.each(tweets, function(i, tweet) {
+        $.each(tweets, function(tweet) {
           insertHTML += buildHTML(tweet)
         });
         $('.tweets').append(insertHTML);
@@ -85,6 +88,8 @@ $(function(){
       alert('error');
     });
   };
+  
+
   if (document.location.href.match(/\/groups\/\d+\/tweets/)) {
     setInterval(reloadTweets, 7000);
   }

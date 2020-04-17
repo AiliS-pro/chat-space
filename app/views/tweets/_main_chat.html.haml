@@ -9,7 +9,7 @@
           %li 
             - @group.group_users.each do |group_user|
               = group_user.user.name
-    =link_to 'Edit', edit_group_path(@group), class: "main__header--edit-btn" 
+    =link_to "#{@group.name}を編集", edit_group_path(@group), class: "main__header--edit-btn" 
   
   .main__message-list
     .tweets
@@ -22,4 +22,5 @@
         = f.label :image, class: 'main__footer__message-form__message-create__image-form' do
           = icon('far', 'image')
           = f.file_field :image, class: 'main__footer__message-form__message-create__image-form--image-label--none'
-        = f.submit 'Send', class: 'main__footer__message-form__send-btn'
+        = button_tag type: 'submit', class: 'main__footer__message-form__send-btn' do
+          = icon('fas', 'paper-plane')
