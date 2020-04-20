@@ -31,7 +31,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'hirb'                # コンソール出力結果を表にする
+gem 'hirb-unicode'        # コンソール文字の表示を補正する
+gem 'knock', '~> 2.1.1'   # JWT認証機構
+gem 'bcrypt', '~> 3.1.11' # password暗号化
+gem 'aws-ses', '~> 0.6'   # 本番環境 mailer
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -48,6 +52,9 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
   gem 'mysql2', '>= 0.3.18', '< 0.6.0'
+  gem 'dotenv-rails', '~> 2.5.0', require: 'dotenv/rails-now' # 環境変数の管理
+  gem 'pry-byebug'             # binding.pry
+  gem 'sqlite3', '~> 1.4'      # development DB
 end
 
 gem 'devise'
@@ -73,5 +80,5 @@ gem 'fog-aws'
 gem 'mini_magick'
 group :production do
   gem 'unicorn', '5.4.1'
-  gem 'pg'
+  gem 'pg', '~> 0.18.4' # heroku DB
 end
